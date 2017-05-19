@@ -1,0 +1,30 @@
+{
+  "short_name": "Prototype",
+  "name": "UC Blackboard Prototype",
+  "theme_color": "#424242",
+  "background_color": "#F7F8F9",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "pictures/UC_Blackboard_Logo.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "pictures/UC_Blackboard_Logo.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "pictures/UC_Blackboard_Logo.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "pictures/UC_Blackboard_Logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/?utm_source=launcher"
+}

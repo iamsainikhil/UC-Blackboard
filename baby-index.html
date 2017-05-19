@@ -6,16 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Chrome, Firefox OS and Opera -->
-<meta name="theme-color" content="#4285f4">
+<meta name="theme-color" content="#424242">
 <!-- Windows Phone -->
-<meta name="msapplication-navbutton-color" content="#4285f4">
+<meta name="msapplication-navbutton-color" content="#424242">
 <!-- iOS Safari -->
-<meta name="apple-mobile-web-app-status-bar-style" content="#4285f4">
+<meta name="apple-mobile-web-app-status-bar-style" content="#424242">
 <link rel="icon" sizes="192x192" href="pictures/UC_Blackboard_Logo.png">
 
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
 
-    <title>UC Blackboard Prototype</title>
-
+ <title>UC Blackboard Prototype</title>
+ <link rel="manifest" href="manifest.json">
     <!-- Include the CSS -->
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
@@ -29,10 +31,11 @@
       <link href="../assets/css/application-minimal.css" rel="stylesheet">
 	  <link href="assets/css/toolkit-startup.css" rel="stylesheet">
       <link href="assets/css/application-startup.css" rel="stylesheet">
-      <link href="style-box.css" rel="stylesheet">
 
       <link href="../assets/css/docs.css" rel="stylesheet">
 	<link href="style.css" rel="stylesheet">
+       <link href="style-box.css" rel="stylesheet">
+      <link href="pop-up-box.css" rel="stylesheet">
 	<style>
 	#myiframe{
 	display:none;
@@ -40,11 +43,21 @@
 	#show-me{
 	display:none;
 	}
-	</style>
-	<script type="text/javascript" src="tinybox.js"></script>
+      	</style>
+<!-- Hotjar Tracking Code for www.metechgeek.ezyro.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:446112,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<script type="text/javascript" src="tinybox.js"></script>
   </head>
   <body>
-
   <nav class="navbar navbar-transparent m-b-0 fixed" style="background-color:red;">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -68,19 +81,25 @@
     </div>
   </nav>
 
-<div class="block block-inverse text-center" id="title-block-me">
+  <div id="boxes" class="hidden-lg-up">
+  <div id="dialog" class="window">
+    <img src="http://hci.ezyro.com/pictures/add-to-home-screen.png" style="max-width:100%;max-height:100%" />
+    <div id="popupfoot" style="text-align:center;"> <a href="http://hci.ezyro.com/prototype.html" class="agree" style="text-decoration:none;color:blue;font-family:'Raleway';">Agree</a>&nbsp;&vert;&nbsp;&nbsp;<a href="https://marvelapp.com/7ha5fej" class="agree" style="text-decoration:none;color:red;font-family:'Raleway';">Disagree</a></div>
+  </div>
+  <div id="mask"></div>
+</div>
+
+<div class="block block-inverse text-center" id="title-block-me" >
   <div class="block-foreground" id="block_me" style="font-family:'Raleway';color:black;">
     <h1 class="block-title" id="hide-me">Prototype</h1>
     <h4 class="text-muted hidden-sm-down" id="hide-me1">The modified version of UC Blackboard</h4>
-	<iframe id="myiframe" class="iframe-me" src="https://marvelapp.com/7ha5fej?emb=1" width="100%" height="100%" allowTransparency="true" allowFullScreen seamless scrolling="no" frameborder="0"></iframe>
-	<p style="text-align:center;" id="show-me"><button class="btn btn-sm btn-pill btn-danger m-t"><a href="baby-index.html" style="text-decoration:none;">BACK</a></button></p>
-	<button class="btn btn-sm btn-pill btn-danger m-t" id="hide-me2" onclick="showIFrame(),show()">TEST</button>
-	<div id = "myDiv" style="display:none"><img id = "myImage" src = "images/ajax-loader.gif"></div><br>
+  <iframe id="myiframe" class="iframe-me" src="https://marvelapp.com/7ha5fej?emb=1" style="width:100%; height:100%;"allowTransparency="true" allowFullScreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen scrolling="no" seamless frameborder="0"></iframe><br/>
+	<button class="btn btn-lg btn-danger-outline" id="hide-me2" onclick="showIFrame()" style="color:black;">TEST</button>
+        <p style="text-align:center;" id="show-me" ><button class="btn btn-sm btn-pill btn-danger m-t"><a href="prototype.html" style="text-decoration:none;color:black;">BACK</a></button></p>
 	</div>
 	 <div class="block-background" style="background-color:orange;">
   </div>
 </div>
-
 <div class="block block-secondary app-iphone-block" id="explore">
   <div class="container">
     <div class="row app-align-center">
@@ -93,53 +112,43 @@
         <h2 class="text-muted text-uppercase" id="shop" style="font-family:'Raleway';color:black">Product Life Cycle</h2>
         <h3 class="m-t-0" style="font-family:'Roboto Slab'">Make wise decisions to get better product with the best prototype</h3>
         <p class="lead m-b-md" style="font-family:'Raleway'">In order to achieve the above criteria, I need your support to test the prototype developed as a modified version of UC&nbsp;Blackboard&reg;.</p>
-		<h3 onclick="TINY.box.show({iframe:'https://marvelapp.com/7ha5fej',boxid:'frameless',width:false,height:false,fixed:false,maskid:'bluemask',maskopacity:40,closejs:function(){closeJS()}})" style="cursor:pointer;">Prototype</h3>
-	</div>
+       <a class="typeform-share button btn btn-lg btn-success-outline " href="https://sainikhil1.typeform.com/to/mzTEhA" data-mode="popup" style=" cursor: pointer; font-family:'Raleway';font-size:20px;  text-align:center" target="_blank" > GIVE FEEDBACK </a>
+<script> (function() { var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement, gt = d.getElementsByTagName, id = "typef_orm_share", b = "https://s3-eu-west-1.amazonaws.com/share.typeform.com/"; if (!gi.call(d, id)) { js = ce.call(d, "script"); js.id = id; js.src = b + "share.js"; q = gt.call(d, "script")[0]; q.parentNode.insertBefore(js, q) } })() </script>
+&nbsp;&nbsp;<a class="btn btn-lg btn-info-outline" id="box-me" style=" cursor: pointer; font-family:'Raleway'; font-size:20px;text-align:center;text-transform:uppercase" onclick="TINY.box.show({iframe:'https://marvelapp.com/7ha5fej',boxid:'frameless',width:750,height:450,fixed:false,maskid:'bluemask',maskopacity:40,closejs:function(){closeJS()}})" style="cursor:pointer;">Box View of Prototype</a>
+
+</div>
 </div>
 </div>
 </div>
 
-<div class="block block-inverse app-footer hidden-xs" style="height:auto;">
+<div class="block block-inverse app-footer" style="height:auto;">
  <div class="container">
     <div class="row">
       <div class="col-sm-6 m-b-md">
         <ul class="list-unstyled list-spaced">
-          <li class="m-b"><h6 class="text-uppercase">About Developer</h6></li>
+          <li class="m-b"><h6 class="text-uppercase"><a href="https://linkedin.com/in/sainikhil12" target="_blank" style="text-decoration:none"><i class="fa fa-linkedin-square"></i>&nbsp;&nbsp;About Developer</a></h6></li>
           <li class="text-muted">
            Sai Nikhil is pursuing his master's degree in Information Technology at University of Cincinnati. He has a strong passion towards technology, UX designing, web development, and Ethical Hacking. In his free time, he loves to play cricket, PC & Mobile games, etc.
           </li>
         </ul>
       </div>
-      <div class="col-sm-3 m-b-md">
+      <div class="col-sm-6 m-b-md">
         <ul class="list-unstyled list-spaced" style="float:center;">
-         <li><h6 class="text-uppercase"><a tabindex="0" href="#" rel="popover" data-popover-content="#myPopover"  data-placement="right" data-trigger="focus" style="font-family:'Raleway';color:white;text-decoration:none;text-transform:uppercase"><button type="button" class="btn btn-sm btn-danger-outline" ><i class="fa fa-exclamation-triangle"></i>&nbsp;Disclaimer</button></a><br/><br/>
+             <li><h6 class="text-uppercase"><a tabindex="0" href="#" rel="popover" data-popover-content="#myPopover"  data-placement="right" data-trigger="focus" style="font-family:'Raleway';color:white;text-decoration:none;"><button type="button" class="btn btn-sm btn-danger-outline" style="text-transform:uppercase" ><i class="fa fa-exclamation-triangle"></i>&nbsp;Disclaimer</button></a><br/><br/>
  <div id="myPopover" class="hide">
 	<h3 style="letter-spacing:2px;text-align:center;float:top;background-color:grey;color:white;">LEGAL</h3>
 	<p style="font-family:'Libre Baskerville';float:bottom">The UC Logo and Blackboard Logo are registered trademarks of University of Cincinnati & Blackboard respectively.</p>
- <h3  style="letter-spacing:2px;text-align:center;background-color:grey;color:white">PRIVACY</h3>
-<ul>
-<li>Live tracking code is implemented on website which collects the clicks, scroll, and touch action performed by you.
-This data is just used to analyze the user actions made on the website and not for other purposes.</li>
-<li>Feedback form implemented on the website was created with Typeform tool which collects your responses and calculate qualitative results from them.</li>
-<li>If you have any queries regarding the credibility of prototype, you can view the related documents under Documentation section on the website.</li>
-<li><strong>Important Note:</strong> The data collected above is just used for study related analysis and not to misuse the information in any kind.</li>
-</ul>
-       <footer style="font-family:'Libre Baskerville';float:bottom;background-color:black"><p>Course Credits - </p>
-<p><a href="http://cech.uc.edu/faculty-staff.html?eid=lee2kj&thecomp=uceprof" target="_blank"
-        style="text-decoration:none;font-family:'Roboto Slab';">Prof. Ki Jung Lee</a></p>
+ <h3  style="letter-spacing:2px;text-align:center;background-color:grey;color:white;">PRIVACY</h3>
+<p style="font-family:'Libre Baskerville';">Live tracking code is implemented on website which collects the clicks, scroll, and touch action performed by you.
+This data is just used to analyze the user actions made on the website and not for other purposes</p>
+<footer style="font-family:'Libre Baskerville';float:bottom;background-color:black;color:white;text-align:center"><p>&copy;2017 &nbsp;Sai Nikhil</p></footer>
 </div></li>
-	  <div class= "col-sm-3 m-b-md">
-	  <p><a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.</p>
-    </div>
+<li><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" style="text-decoration:none;"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a href="https://marvelapp.com/7ha5fej" target="_blank" style="text-decoration:none;">UC Blackboard Prototype</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.linkedin.com/in/sainikhil12" target="_blank" style="text-decoration:none;" property="cc:attributionName" rel="cc:attributionURL">Sai Nikhil</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" style="text-decoration:none;">Creative Commons Attribution-NonCommercial 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="http://hci.ezyro.com" rel="dct:source" target="_blank" style="text-decoration:none;">http://hci.ezyro.com</a>.</li>
+        </ul>
+      </div><br/>
 	</div>
   </div>
 </div>
-</div>
-
-
- <div class="footer" style="text-align:center;font-family:'Raleway';background-color:black;">
-
- <p style="text-align:center;font-family:'Fira Sans';color:white;background-color:black">&copy;2017 &nbsp;Sai Nikhil</p>
 
 
 
@@ -180,25 +189,64 @@ function showIFrame() {
  hide2.style.display="none";
  show.style.display="block";
 }
-(function(){
-    var myDiv = document.getElementById("myDiv"),
-
-      show = function(){
-        myDiv.style.display = "block";
-        setTimeout(hide, 5000); // 5 seconds
-      },
-
-      hide = function(){
-        myDiv.style.display = "none";
-      };
-
-    show();
-  })();
-
 </script>
 <script type="text/javascript">
 function openJS(){alert('loaded')}
 function closeJS(){}
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+    console.log("Will the service worker register?");
+    navigator.serviceWorker.register('service-worker.js')
+      .then(function(reg){
+        console.log("Yes, it did.");
+     }).catch(function(err) {
+        console.log("No it didn't. This happened:", err)
+    });
+ }
+</script>
+<script>$(document).ready(function() {
+
+var id = '#dialog';
+
+//Get the screen height and width
+var maskHeight = $(document).height();
+var maskWidth = $(window).width();
+
+//Set heigth and width to mask to fill up the whole screen
+$('#mask').css({'width':maskWidth,'height':maskHeight});
+
+//transition effect
+$('#mask').fadeIn(500);
+$('#mask').fadeTo("slow",0.9);
+
+//Get the window height and width
+var winH = $(window).height();
+var winW = $(window).width();
+
+//Set the popup window to center
+$(id).css('top',  winH/2-$(id).height()/2);
+$(id).css('left', winW/2-$(id).width()/2);
+
+//transition effect
+$(id).fadeIn(2000);
+
+//if close button is clicked
+$('.window .close').click(function (e) {
+//Cancel the link behavior
+e.preventDefault();
+
+$('#mask').hide();
+$('.window').hide();
+});
+
+//if mask is clicked
+$('#mask').click(function () {
+$(this).hide();
+$('.window').hide();
+});
+
+});
 </script>
   </body>
 </html>
