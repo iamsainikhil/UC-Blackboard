@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head id="top-section">
+    <!-- These meta tags come first. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#4285f4">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#4285f4">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#4285f4">
+<link rel="icon" sizes="192x192" href="pictures/UC_Blackboard_Logo.png">
+
+
+    <title>UC Blackboard Prototype</title>
+
+    <!-- Include the CSS -->
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="dist/toolkit.min.css" rel="stylesheet">
+	<link href="dist/toolkit-startup.css" rel="stylesheet">
+	<link href="dist/toolkit-startup.min.css" rel="stylesheet">
+	<link href="../assets/css/toolkit-minimal.css" rel="stylesheet">
+      <link href="../assets/css/application-minimal.css" rel="stylesheet">
+	  <link href="assets/css/toolkit-startup.css" rel="stylesheet">
+      <link href="assets/css/application-startup.css" rel="stylesheet">
+      <link href="style-box.css" rel="stylesheet">
+
+      <link href="../assets/css/docs.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+	<style>
+	#myiframe{
+	display:none;
+	}
+	#show-me{
+	display:none;
+	}
+	</style>
+	<script type="text/javascript" src="tinybox.js"></script>
+  </head>
+  <body>
+
+  <nav class="navbar navbar-transparent m-b-0 fixed" style="background-color:red;">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-com" style="background-color:black;">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="">
+		<h4 class="text-uppercase m-y-0" style="font-family:'Raleway';font-weight:bold;text-align:center;"><span><img class="hidden-xs" src="pictures/UC_Blackboard_Logo.png" width="50px" height="30px"/></span>&nbsp;UC Blackboard</h4>
+        </a>
+      </div>
+	<div class="navbar-collapse collapse" id="navbar-collapse-com">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="documentation.html" style="color:black;font-family:'Raleway'"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Documentation</a></li>
+          <li><a href="mailto:bheemasl@mail.uc.edu" style="color:black;font-family:'Raleway'"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;Email</a></li>
+          <li><a href="https://www.linkedin.com/in/sainikhil12" style="color:black;font-family:'Raleway'"><i class="fa fa-linkedin-square" aria-hidden="true"style="font-size:19px;"></i>&nbsp;Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div class="block block-inverse text-center" id="title-block-me">
+  <div class="block-foreground" id="block_me" style="font-family:'Raleway';color:black;">
+    <h1 class="block-title" id="hide-me">Prototype</h1>
+    <h4 class="text-muted hidden-sm-down" id="hide-me1">The modified version of UC Blackboard</h4>
+	<iframe id="myiframe" class="iframe-me" src="https://marvelapp.com/7ha5fej?emb=1" width="100%" height="100%" allowTransparency="true" allowFullScreen seamless scrolling="no" frameborder="0"></iframe>
+	<p style="text-align:center;" id="show-me"><button class="btn btn-sm btn-pill btn-danger m-t"><a href="baby-index.html" style="text-decoration:none;">BACK</a></button></p>
+	<button class="btn btn-sm btn-pill btn-danger m-t" id="hide-me2" onclick="showIFrame(),show()">TEST</button>
+	<div id = "myDiv" style="display:none"><img id = "myImage" src = "images/ajax-loader.gif"></div><br>
+	</div>
+	 <div class="block-background" style="background-color:orange;">
+  </div>
+</div>
+
+<div class="block block-secondary app-iphone-block" id="explore">
+  <div class="container">
+    <div class="row app-align-center">
+
+      <div class="col-sm-4">
+        <img class="app-iphone" src="pictures/hci.jpg" style="width: 100%;">
+      </div>
+
+      <div class="col-sm-6 col-sm-offset-1">
+        <h2 class="text-muted text-uppercase" id="shop" style="font-family:'Raleway';color:black">Product Life Cycle</h2>
+        <h3 class="m-t-0" style="font-family:'Roboto Slab'">Make wise decisions to get better product with the best prototype</h3>
+        <p class="lead m-b-md" style="font-family:'Raleway'">In order to achieve the above criteria, I need your support to test the prototype developed as a modified version of UC&nbsp;Blackboard&reg;.</p>
+		<h3 onclick="TINY.box.show({iframe:'https://marvelapp.com/7ha5fej',boxid:'frameless',width:false,height:false,fixed:false,maskid:'bluemask',maskopacity:40,closejs:function(){closeJS()}})" style="cursor:pointer;">Prototype</h3>
+	</div>
+</div>
+</div>
+</div>
+
+<div class="block block-inverse app-footer hidden-xs" style="height:auto;">
+ <div class="container">
+    <div class="row">
+      <div class="col-sm-6 m-b-md">
+        <ul class="list-unstyled list-spaced">
+          <li class="m-b"><h6 class="text-uppercase">About Developer</h6></li>
+          <li class="text-muted">
+           Sai Nikhil is pursuing his master's degree in Information Technology at University of Cincinnati. He has a strong passion towards technology, UX designing, web development, and Ethical Hacking. In his free time, he loves to play cricket, PC & Mobile games, etc.
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-3 m-b-md">
+        <ul class="list-unstyled list-spaced" style="float:center;">
+         <li><h6 class="text-uppercase"><a tabindex="0" href="#" rel="popover" data-popover-content="#myPopover"  data-placement="right" data-trigger="focus" style="font-family:'Raleway';color:white;text-decoration:none;text-transform:uppercase"><button type="button" class="btn btn-sm btn-danger-outline" ><i class="fa fa-exclamation-triangle"></i>&nbsp;Disclaimer</button></a><br/><br/>
+ <div id="myPopover" class="hide">
+	<h3 style="letter-spacing:2px;text-align:center;float:top;background-color:grey;color:white;">LEGAL</h3>
+	<p style="font-family:'Libre Baskerville';float:bottom">The UC Logo and Blackboard Logo are registered trademarks of University of Cincinnati & Blackboard respectively.</p>
+ <h3  style="letter-spacing:2px;text-align:center;background-color:grey;color:white">PRIVACY</h3>
+<ul>
+<li>Live tracking code is implemented on website which collects the clicks, scroll, and touch action performed by you.
+This data is just used to analyze the user actions made on the website and not for other purposes.</li>
+<li>Feedback form implemented on the website was created with Typeform tool which collects your responses and calculate qualitative results from them.</li>
+<li>If you have any queries regarding the credibility of prototype, you can view the related documents under Documentation section on the website.</li>
+<li><strong>Important Note:</strong> The data collected above is just used for study related analysis and not to misuse the information in any kind.</li>
+</ul>
+       <footer style="font-family:'Libre Baskerville';float:bottom;background-color:black"><p>Course Credits - </p>
+<p><a href="http://cech.uc.edu/faculty-staff.html?eid=lee2kj&thecomp=uceprof" target="_blank"
+        style="text-decoration:none;font-family:'Roboto Slab';">Prof. Ki Jung Lee</a></p>
+</div></li>
+	  <div class= "col-sm-3 m-b-md">
+	  <p><a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.</p>
+    </div>
+	</div>
+  </div>
+</div>
+</div>
+
+
+ <div class="footer" style="text-align:center;font-family:'Raleway';background-color:black;">
+
+ <p style="text-align:center;font-family:'Fira Sans';color:white;background-color:black">&copy;2017 &nbsp;Sai Nikhil</p>
+
+
+
+    <!-- Include jQuery (required) and the JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="dist/toolkit.min.js"></script>
+	<script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/toolkit.js"></script>
+    <script src="../assets/js/application.js"></script>
+	<script src="scrolltop.js"></script>
+	<script>
+	$(function(){
+    $('[rel="popover"]').popover({
+        container: 'body',
+        html: true,
+        content: function () {
+            var clone = $($(this).data('popover-content')).clone(true).removeClass('hide');
+            return clone;
+        }
+    }).click(function(e) {
+        e.preventDefault();
+    });
+});
+$('.popover-dismiss').popover({
+  trigger: 'focus'
+})
+	</script>
+	<script type="text/javascript">
+function showIFrame() {
+ var iframe = document.getElementById("myiframe");
+ var hide = document.getElementById("hide-me");
+ var hide1 = document.getElementById("hide-me1");
+ var hide2 = document.getElementById("hide-me2");
+ var show = document.getElementById("show-me");
+ iframe.style.display="block";
+ hide.style.display="none";
+ hide1.style.display="none";
+ hide2.style.display="none";
+ show.style.display="block";
+}
+(function(){
+    var myDiv = document.getElementById("myDiv"),
+
+      show = function(){
+        myDiv.style.display = "block";
+        setTimeout(hide, 5000); // 5 seconds
+      },
+
+      hide = function(){
+        myDiv.style.display = "none";
+      };
+
+    show();
+  })();
+
+</script>
+<script type="text/javascript">
+function openJS(){alert('loaded')}
+function closeJS(){}
+</script>
+  </body>
+</html>
